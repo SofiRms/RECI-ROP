@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Login=()=> {
+export const Login=()=> {
   return (
     <div className='promo_card'>
     <form action="/my-handling-form-page" method="post">
@@ -22,4 +22,3 @@ const Login=()=> {
   )
 }
 
-export default Login

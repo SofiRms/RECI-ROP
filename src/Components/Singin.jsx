@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Singin=()=> {
+export const Singin=()=> {
   
   return (
     <div className='container'>
@@ -24,6 +24,5 @@ const Singin=()=> {
   )
 }
 
-export default Singin
 
 

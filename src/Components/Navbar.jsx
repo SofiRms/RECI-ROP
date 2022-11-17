@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { diccionario } from "../auxs/library";
 
-const Navbar= (props)=>{
+export const Navbar= (props)=>{
     const{Saludo}=props
     return (
        <header>
@@ -38,7 +38,7 @@ const Navbar= (props)=>{
                 Usuario
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><Link className="dropdown-item" to="/Iniciosesion">Iniciar Sesion</Link></li>
+                <li><Link className="dropdown-item" to="/login">Iniciar Sesion</Link></li>
                 <li><Link className="dropdown-item" to="/Registro">Registrarse</Link></li>
                 <li><h1 className="dropdown-divider"></h1></li>
                 <li><a className="dropdown-item">Necesitas ayuda?</a></li>
@@ -53,4 +53,3 @@ const Navbar= (props)=>{
        </header>
     )
 }
-export default Navbar

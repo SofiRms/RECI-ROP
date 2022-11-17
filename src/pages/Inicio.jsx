@@ -1,8 +1,14 @@
-import React from 'react'
+import {Navbar, Carousel} from "../Components/"
+
+
+
 
 const Inicio=()=> {
   return (
-    <div>Inicio</div>
+    <>
+      <Navbar/>
+      <Carousel/>
+    </>
   )
 }
 export default Inicio

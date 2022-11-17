@@ -13,7 +13,7 @@ const Rutas=()=> {
             <Routes>
                 <Route path='/' element= {<Mainbody/>}/>
                 <Route path='/Registro' element= {<Registro/>}/>
-                <Route path='/Iniciosesion' element={<Iniciosesion/>}/>
+                <Route path='/login' element={<Iniciosesion/>}/>
             </Routes>
 
         </Router>

@@ -1,5 +1,5 @@
 import React from "react";
-const Carousel = () => {
+export const Carousel = () => {
   return (
 <div>
 <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false">
@@ -43,4 +43,4 @@ const Carousel = () => {
 </div>
   );
 };
-export default Carousel;
+

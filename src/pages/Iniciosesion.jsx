@@ -1,14 +1,14 @@
 import React from 'react'
-import Login from '../componentes/Login'
-import Formulario from '../componentes/Login'
-import Navbar from '../componentes/Navbar'
+
+import {Navbar,Login} from '../Components/'
+
 
 const Iniciosesion=()=> {
   return (
-    <div>
+    <>
       <Navbar/>
       <Login/>
-    </div>
+    </>
   )
 }
 
