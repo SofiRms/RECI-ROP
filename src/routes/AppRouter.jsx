@@ -1,8 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-import Iniciosesion from "../pages/Iniciosesion"
 import { PublicRoutes } from "./PublicRoutes"
-import Inicio from "../pages/Inicio"
+import {Iniciosesion, Registro,Inicio} from '../pages/'
 export const AppRouter = () => {
   return (
     <BrowserRouter>
@@ -15,6 +14,10 @@ export const AppRouter = () => {
            
           </PublicRoutes>
         } />
+
+        <Route path='/Registro' element={
+          <Registro/>
+        }/>
 
         <Route path='/*' element={
             <Inicio/>

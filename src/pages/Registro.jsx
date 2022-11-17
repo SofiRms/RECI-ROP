@@ -1,8 +1,7 @@
 import React from 'react'
-import Navbar from '../componentes/Navbar'
-import Singin from '../componentes/Singin'
+import { Navbar,Singin } from '../Components'
 
-const Registrarse = ()=> {
+export const Registro = ()=> {
   return (
     <div>
         <Navbar/>
@@ -10,4 +9,3 @@ const Registrarse = ()=> {
     </div>
   )
 }
-export default Registrarse

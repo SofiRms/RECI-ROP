@@ -3,7 +3,7 @@ import {Navbar, Carousel} from "../Components/"
 
 
 
-const Inicio=()=> {
+export const Inicio=()=> {
   return (
     <>
       <Navbar/>
@@ -11,4 +11,3 @@ const Inicio=()=> {
     </>
   )
 }
-export default Inicio

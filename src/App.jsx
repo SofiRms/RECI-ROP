@@ -8,11 +8,9 @@ import { authreducer1 } from './reducers/Authreducer1'
 function App() {
 const usuario={
   username:'sofi',
-  rol: 'admin',
   isLogged:true
 }
   const [user, dispatch] = useReducer(authreducer1,usuario)
-
 
   return (
     <AuthContext.Provider

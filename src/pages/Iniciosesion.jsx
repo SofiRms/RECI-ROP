@@ -3,7 +3,7 @@ import React from 'react'
 import {Navbar,Login} from '../Components/'
 
 
-const Iniciosesion=()=> {
+export const Iniciosesion=()=> {
   return (
     <>
       <Navbar/>
@@ -12,4 +12,4 @@ const Iniciosesion=()=> {
   )
 }
 
-export default Iniciosesion
+
