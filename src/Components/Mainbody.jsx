@@ -1,6 +1,5 @@
 import React from 'react'
-import Carousel from './Carousel'
-import Navbar from './Navbar'
+import {Navbar, Carousel} from '../Components/'
 
 const Mainbody=()=>{
   return (

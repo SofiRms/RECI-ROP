@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 import { PublicRoutes } from "./PublicRoutes"
-import {Iniciosesion, Registro,Inicio} from '../pages/'
+import {Iniciosesion, Registro,Inicio,Donaciones} from '../pages/'
 export const AppRouter = () => {
   return (
     <BrowserRouter>
@@ -9,9 +9,12 @@ export const AppRouter = () => {
 
         <Route path='/login' element={ 
           <PublicRoutes>
-            
               <Iniciosesion/>
-           
+          </PublicRoutes>
+        } />
+         <Route path='/donaciones' element={ 
+          <PublicRoutes>
+              <Donaciones/>
           </PublicRoutes>
         } />
 
@@ -19,7 +22,7 @@ export const AppRouter = () => {
           <Registro/>
         }/>
 
-        <Route path='/*' element={
+        <Route path='/Inicio' element={
             <Inicio/>
           // Proteger las rutas privadas
         } />
