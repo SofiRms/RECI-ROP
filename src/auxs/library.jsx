@@ -8,24 +8,7 @@ export const diccionario={
             console.log(error);
             return{msg: 'error :' +error}
         }
-    },
-
-    // loginUser: async()=>{
-    //     try{
-    //         const req= await fetch ('http://localhost:4024/login',{
-    //             method:'POST',
-    //             body:
-    //         })
-    //         const response= await req.json()
-    //         return(response)
-    //     }catch(error){
-    //         console.log(error);
-    //         return{msg: 'error :' +error}
-    //     }
-    // },
-
-
-       
+    },       
     createUser: async(username,email,password)=>{
         if(!username || !email || !password){
             return { error: 'Todos los datos son necesarios'}
@@ -55,25 +38,48 @@ export const diccionario={
  } catch (error) {
     console.log()
     
-        //Se obtienen los datos enviados por metodo POST
-    //    const {username, email, password} = req.body;
     
-        //Encriptacion de la contraseña
-        //const newPassword= bcrypt.hashSync(passwordRecibida, 10);
-    
-//         //Instancia un nuevo documento de mongoDB para luego ser guardado
-//         const newuser = new user ({
-//             username,
-//             email,
-//             password
-//         });
-//         const user = await newuser.save();
-//         return res.json({
-//             msg: 'Usuario creado',
-//             user
-//         });
-// }
+ }},
+    iniciarSesion: async(email,password) => {
+        if(!email || !password){
+            return { error: 'Todos los datos son necesarios'}
+        }
+    //const {email, password} = req.body;
 
+    try{
+        //Busca si el email existe
+        const user = await user.findOne({email});
+       
+        if(!user){
+            return res.status(400).json({
+                ok: false,
+                msg: 'Error al autenticar usuario' 
+            });
+        }
+        if (!user.isActive){
+            return res.status(400).json({
+                ok: false,
+                msg: 'Error: usuario inactivo'
+            });
+        }
+   //verificar password
+   //const validPassword= bcrypt.compareSync(password, user.password);
 
+   if (!password) {
+       return res.status(400).json({
+           ok: false,
+           msg: 'Error al autenticarse'
+       })
+   }
+   const res = await fetch("http://localhost:4024/login", requestOptions)
+   const resjson = await res.json();
+   console.log('logged')
+   return resjson;
+//    const token = await generarJWT({uid:user._id})
+//    res.json(token)
+}catch(error){
+    console.log(error);
+    return{msg: 'error :' +error}
+}},
+}
 
-}}}

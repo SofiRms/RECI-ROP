@@ -5,53 +5,39 @@ import { useState } from "react";
 import { diccionario} from "../auxs/library";
 
 export const Login = () => {
-
-  const postUser = async () => {
-    const traer = await diccionario.loginUser()
-    console.log(traer)
-  }
-  const [formData, setFormData] = useState({username: "", password: "" });
-  const options = {
-    method: "POST",
-    Headers: {
-      "Content-type": "application/json",
-    },
-  };
+  
   const handlechange=({target})=>{
     setFormData({
       ...formData,[target.name]: target.value
     })
-    }
-  const handlesubmit = async (e) => {
+    console.log(formData)
+  }
+ const postuser=async()=>{
     e.preventDefault();
 
-    options.body = JSON.stringify({username, password});
-    const resp = await fetch("localhost:4024/login", options);
+  const userlogged = await diccionario.iniciarSesion(formData.email, formData.password)
 
-    if (!resp.ok)
-      alert("Hubo un error en las casillas verifique e intenlo de nuevo");
-
-    const data = await resp.json();
-    console.log(data);
-
-    // localStorage.setItem("token", JSON.stringify(data));
-  };
-  console.log(formData);
+    }
+ 
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
   return (
     <>
       <div className="promo_card">
-        <form action="/my-handling-form-page" onSubmit={postUser}>
+        <form action="/my-handling-form-page" onSubmit={postuser}>
           <ul>
             <li>
               <label htmlFor="name" className="labelname">
-                Nombre:
+                email:
               </label>
               <div>
                 <input
                   className="inputname"
-                  type="text"
+                  type="email"
                   id="name"
-                  name="user_name"
+                  name="email"
                   onChange={handlechange}
                 ></input>
               </div>
