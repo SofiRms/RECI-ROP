@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { diccionario } from "../auxs/library";
+i
 
 export const Navbar= (props)=>{
     const{Saludo}=props

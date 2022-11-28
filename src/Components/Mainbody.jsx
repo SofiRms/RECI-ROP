@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from './Carousel'
 import Navbar from './Navbar'
 
-const Mainbody=()=>{
+export const Mainbody=()=>{
   return (
     <div>
         <Navbar/>
@@ -10,4 +10,3 @@ const Mainbody=()=>{
     </div>
   )
 }
-export default Mainbody

@@ -1,25 +1,48 @@
 import React from "react";
 import { useState } from "react";
-
+import { diccionario } from "../auxs/library";
 export const Singin = () => {
+
+  
+  const handlechange=({target})=>{
+    setFormData({
+      ...formData,[target.name]: target.value
+    })
+    console.log(formData)
+  }
+ const postuser=async(e)=>{
+  
+   
+    e.preventDefault();
+
+  const crear= await diccionario.createUser()
+  
+    crear(formData.username, formData.email, formData.password)
+    }
+ 
+  /*const postUser = async () => {
+    
+
+    console.log(crear)
+    //handlechange()
+
+  }*/
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
-const handlechange=({target})=>{
-setFormData({
-  ...formData,[target.name]: target.value
-})
-}
 
-  const options = {
-    method: "POST",
-    Headers: {
-      "Content-type": "application/json",
-    },
-  };
-  const handlesubmit = async (e) => {
+
+
+
+  // const options = {
+  //   method: "POST",
+  //   Headers: {
+  //     "Content-type": "application/json",
+  //   },
+  // };
+  /*const handlesubmit = async (e) => {
     e.preventDefault();
 
     options.body = JSON.stringify({username, email, password });
@@ -30,12 +53,12 @@ setFormData({
     const data = await resp.json();
     console.log(data);
 
-    localStorage.setItem("token", JSON.stringify(data));
+   // localStorage.setItem("token", JSON.stringify(data));
   };
-  console.log(formData);
+  console.log(formData);*/
   return (
     <div className="container">
-      <form action="/my-handling-form-page" onSubmit={handlesubmit}>
+      <form action="/my-handling-form-page" onSubmit={postuser}>
         <ul>
           <li>
             <label htmlFor="name">Nombre:</label>

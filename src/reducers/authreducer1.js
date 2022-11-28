@@ -10,7 +10,6 @@ export const authreducer1 =(state, action)=>{
                 ...action.payload,
                 isLogged:false
             }
-    
         default:
             return state
         

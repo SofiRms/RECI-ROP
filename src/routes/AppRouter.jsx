@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-import { PublicRoutes } from "./PublicRoutes"
+//import { PublicRoutes } from "./PublicRoutes"
 import {Iniciosesion, Registro,Inicio} from '../pages/'
 export const AppRouter = () => {
   return (
@@ -8,11 +8,11 @@ export const AppRouter = () => {
       <Routes>
 
         <Route path='/login' element={ 
-          <PublicRoutes>
+          // <PublicRoutes>
             
               <Iniciosesion/>
            
-          </PublicRoutes>
+          // </PublicRoutes>
         } />
 
         <Route path='/Registro' element={
