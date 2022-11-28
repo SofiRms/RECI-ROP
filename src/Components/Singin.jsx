@@ -15,47 +15,16 @@ export const Singin = () => {
    
     e.preventDefault();
 
-  const crear= await diccionario.createUser()
-  
-    crear(formData.username, formData.email, formData.password)
+  const newUser = await diccionario.createUser(formData.username, formData.email, formData.password)
+  console.log(newUser)
     }
  
-  /*const postUser = async () => {
-    
-
-    console.log(crear)
-    //handlechange()
-
-  }*/
   const [formData, setFormData] = useState({
     username: "",
     email: "",
     password: "",
   });
 
-
-
-
-  // const options = {
-  //   method: "POST",
-  //   Headers: {
-  //     "Content-type": "application/json",
-  //   },
-  // };
-  /*const handlesubmit = async (e) => {
-    e.preventDefault();
-
-    options.body = JSON.stringify({username, email, password });
-    const resp = await fetch("localhost:4024/user", options);
-
-    if (!resp.ok) console.log("Hubo un error,verifique e intente de nuevo");
-
-    const data = await resp.json();
-    console.log(data);
-
-   // localStorage.setItem("token", JSON.stringify(data));
-  };
-  console.log(formData);*/
   return (
     <div className="container">
       <form action="/my-handling-form-page" onSubmit={postuser}>

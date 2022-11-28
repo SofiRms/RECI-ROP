@@ -27,13 +27,16 @@ export const diccionario={
 
        
     createUser: async(username,email,password)=>{
+        if(!username || !email || !password){
+            return { error: 'Todos los datos son necesarios'}
+        }
         const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
 
     const raw = JSON.stringify({
-      "username": username,
-      "email": email,
-      "password":password
+       username,
+       email,
+      password
     });
 
   const requestOptions = {
@@ -43,12 +46,14 @@ export const diccionario={
     redirect: 'follow'
   };
   try {
+
     console.log(raw)
-   // const res = await fetch("http://localhost:4024/user", requestOptions)
+
+   const res = await fetch("http://localhost:4024/user", requestOptions)
     const resjson = await res.json();
     return resjson;
  } catch (error) {
-    console.log(error)
+    console.log()
     
         //Se obtienen los datos enviados por metodo POST
     //    const {username, email, password} = req.body;
