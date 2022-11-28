@@ -22,7 +22,7 @@ export const AppRouter = () => {
           <Registro />
         } />
 
-<Route path='/donaciones' element={
+<Route path='/donacion' element={
           <PrivateRoutes>
 
             <Donaciones/>
