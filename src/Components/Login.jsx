@@ -3,17 +3,18 @@ import { useState } from "react";
 
 export const Login = () => {
   const [formData, setFormData] = useState({username: "", password: "" });
+  const handlechange=({target})=>{
+    setFormData({
+      ...formData,[target.name]: target.value
+    })
+    };
   const options = {
     method: "POST",
     Headers: {
       "Content-type": "application/json",
     },
   };
-  const handlechange=({target})=>{
-    setFormData({
-      ...formData,[target.name]: target.value
-    })
-    }
+ 
   const handlesubmit = async (e) => {
     e.preventDefault();
 
@@ -61,7 +62,8 @@ export const Login = () => {
               </div>
             </li>
           </ul>
-          <button type="submit">enviar</button>
+          <button type="submit"
+          >enviar</button>
         </form>
       </div>
     </>
