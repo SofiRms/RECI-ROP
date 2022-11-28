@@ -30,8 +30,8 @@ export const Navbar= (props)=>{
             </li>
 
             <li className="nav-item">
-              <a className="nav-link" href="./Foro.html">Foro</a>
-            </li>
+            <Link className="dropdown-item" to="/donacion">Donacion</Link></li>
+            
 
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
