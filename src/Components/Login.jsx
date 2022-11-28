@@ -30,6 +30,7 @@ export const Login = () => {
     localStorage.setItem("token", JSON.stringify(data));
   };
   console.log(formData);
+  
   return (
     <>
       <div className="promo_card">
