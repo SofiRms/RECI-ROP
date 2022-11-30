@@ -1,28 +1,42 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-
+import "../App.css"
 import { PublicRoutes } from "./PublicRoutes"
 import {Iniciosesion, Registro,Inicio} from '../pages/'
+import { Donar } from "../pages/Donar"
+import { PrivateRoutes } from "./PrivateRoues"
 export const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter >
       <Routes>
 
         <Route path='/login' element={ 
           <PublicRoutes>
             
               <Iniciosesion/>
-           
-          </PublicRoutes>
+               
+            </PublicRoutes>
         } />
 
         <Route path='/Registro' element={
           <Registro/>
+        }/> 
+
+        <Route path="/Donar" element={
+          <Donar />
         }/>
 
         <Route path='/*' element={
             <Inicio/>
           // Proteger las rutas privadas
         } />
+
+      <Route path='/*' element={
+        <PrivateRoutes>
+           {/*<Donar/>*/}
+        </PrivateRoutes>
+       
+      }/>
+
       </Routes>
     </BrowserRouter>
   )

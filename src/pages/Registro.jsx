@@ -3,7 +3,7 @@ import { Navbar,Singin } from '../Components'
 
 export const Registro = ()=> {
   return (
-    <div>
+    <div >
         <Navbar/>
         <Singin/>
     </div>
