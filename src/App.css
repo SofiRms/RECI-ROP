@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .degradeLila {
     background: rgb(196,160,83);
 background: radial-gradient(circle, rgba(196,160,83,1) 0%, rgba(238,149,46,0.7651435574229692) 0%, rgba(2,0,36,1) 0%, rgba(121,17,147,1) 97%);
@@ -6,6 +7,26 @@ background: radial-gradient(circle, rgba(196,160,83,1) 0%, rgba(238,149,46,0.765
 .degradeVerde{
     background: rgb(198,90,224);
 background: radial-gradient(circle, rgba(198,90,224,1) 0%, rgba(143,136,143,1) 30%, rgba(143,136,143,1) 74%, rgba(42,152,51,1) 100%);
+=======
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+>>>>>>> 84f4e11211b4d013c42f3d5d279e3c728796078e
 }
 
 .degradeNaranja{
@@ -23,7 +44,13 @@ background: radial-gradient(circle, rgba(208,228,5,1) 18%, rgba(224,132,90,1) 57
 background: radial-gradient(circle, rgba(231,152,117,1) 33%, rgba(97,215,67,1) 100%);
 }
 
+<<<<<<< HEAD
 .blankito{
     background-color: #cbebf1;
 }
 
+=======
+.read-the-docs {
+  color: #888;
+} */
+>>>>>>> 84f4e11211b4d013c42f3d5d279e3c728796078e
