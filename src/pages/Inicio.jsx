@@ -1,4 +1,4 @@
-import {Navbar, Carousel} from "../Components/"
+import {Carousel, Navbar} from "../Components/"
 export const Inicio=()=> {
   return (
     <>

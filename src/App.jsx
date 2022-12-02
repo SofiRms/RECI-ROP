@@ -1,10 +1,11 @@
 import { useReducer } from 'react'
 import reactLogo from './assets/react.svg'
-import './App.css'
+//import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import {AuthContext} from './context/AuthContext'
 import { AppRouter } from './routes/AppRouter'
 import { authreducer1 } from './reducers/Authreducer1'
-
 
 function App() {
 const usuario={

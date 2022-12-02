@@ -1,9 +1,9 @@
-import { Cards, Navbar } from "../Components";
+import { Cards, NavbarLogged } from "../Components";
 
 export const Donaciones=()=>{
     return(
         <>
-        <Navbar/>
+        <NavbarLogged/>
         <Cards/>
         <Cards/>
         <Cards/>
