@@ -22,7 +22,7 @@ export const AppRouter = () => {
           <Registro/>
         }/>
 
-        <Route path='/Inicio' element={
+        <Route path='/' element={
             <Inicio/>
           // Proteger las rutas privadas
         } />
