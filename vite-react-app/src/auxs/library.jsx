@@ -74,9 +74,11 @@ export const diccionario={
    const res = await fetch("http://localhost:4000/login", requestOptions)
    const resjson = await res.json();
    console.log('logged')
-   return resjson;
 //    const token = await generarJWT({uid:user._id})
 //    res.json(token)
+   return resjson;
+   
+
 }catch(error){
     console.log(error);
     return{msg: 'error :' +error}
