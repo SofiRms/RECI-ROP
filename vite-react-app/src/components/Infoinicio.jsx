@@ -17,7 +17,7 @@ export const Infoinicio = () => {
         
 
         <div className="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-start my-5 icono_wrap">
-            <img src="/publicidad - copia.jpeg" alt="publicidad" width="180" height="175"/>
+            <img src="/public/donar.jpg" alt="publicidad" width="180" height="175"/>
             <div>
                 <h3 className="fs-4 mt-3 px-4 pb-1 text-light">Publicidad</h3>
                 <p className="px-2 mx-3">Nuestra empresa tambien brinda propaganda a las empresas que aporten a nuestra causa. Buscamos el beneficio mutuo para todo publico</p>
@@ -34,7 +34,7 @@ export const Infoinicio = () => {
           <p className="fs-4">
             Buscamos una <span className="text-danger">solución</span> para todos
         </p>
-          <img className="img-fluid " src="/public/publicidad - copia.jpeg" alt="grupo"/>
+          <img className="img-fluid " src="/public/donaciones.jpeg" alt="grupo"/>
         </div>
     </div>
     

@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { AuthContext } from '../context/AuthContext';
-import { SocketContext } from '../context/SocketContext';
+
 import '../assets/Login.css';
 import { NavBar } from '../ui/NavBar';
 
 export const ChatScreen = () => {
     const { user } = useContext(AuthContext);
-    const { socket } = useContext(SocketContext);
+    
 
     const [allMessages, setAllMessages] = useState([]);
     console.log(user)
@@ -52,47 +52,6 @@ export const ChatScreen = () => {
 
 
     return (
-        <>
-            <NavBar />
-            <div className='body-chat'>
-                <ul className='list-group'>
-
-                    {
-                        (allMessages.length > 0)
-                            ? (
-                                allMessages.map((message, i) => (
-                                    <li key={i} className={`alert alert-${(message.user === user.username) ? 'primary text-start' : 'secondary text-end'}`}>
-                                        <p>{message.user}: <span> {message.message}</span></p>
-                                    </li>
-                                ))
-                            )
-                            : (
-
-                                <li className="text-center alert alert-info">No hay mensajes</li>
-
-                            )
-                    }
-                </ul>
-                <form
-                    onSubmit={handleSendMessage}
-                    id="form"
-                    action="#">
-                    <input
-                        id="input"
-                        autoComplete="off"
-                        onChange={handleInputChange}
-                        name="message"
-                        value={message}
-                    />
-                    <button
-                        type="submit"
-
-                    >
-                        Enviar
-                    </button>
-                </form>
-            </div>
-        </>
-
+        <p></p>
     )
 }

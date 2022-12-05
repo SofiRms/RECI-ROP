@@ -1,22 +1,22 @@
-import React, { createContext } from "react";
-import { URL } from "../configs/envs";
-import { useSocket } from "../hooks/useSocket";
-export const SocketContext = createContext();
+// import React, { createContext } from "react";
+// import { URL } from "../configs/envs";
+// import { useSocket } from "../hooks/useSocket";
+// export const SocketContext = createContext();
 
-// const socket = useMemo(() => io.connect(serverPath, {
-//     transports: ['websocket'],
-// }), [serverPath]);
+// // const socket = useMemo(() => io.connect(serverPath, {
+// //     transports: ['websocket'],
+// // }), [serverPath]);
 
-export const SocketProvider = ({ children }) => {
+// export const SocketProvider = ({ children }) => {
 
-    const { socket, online } = useSocket(URL);
+//     const { socket, online } = useSocket(URL);
 
-    return (
-        <SocketContext.Provider value={{
-            socket,
-            online
-        }}>
-            {children}
-        </SocketContext.Provider>
-    )
-}
+//     return (
+//         <SocketContext.Provider value={{
+//             socket,
+//             online
+//         }}>
+//             {children}
+//         </SocketContext.Provider>
+//     )
+// }

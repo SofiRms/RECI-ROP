@@ -48,7 +48,7 @@ export const InitDonar = () =>{
 
             const resp = await fetch("http://localhost:4000/Donacion", options);
             const data = await resp.json()
-             
+             console.log(data)
         })()
     };
    

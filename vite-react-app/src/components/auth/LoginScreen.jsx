@@ -37,7 +37,7 @@ export const LoginScreen = () => {
             // Se modifican las opciones del fetch, añadiendo los datos del formulario
             options.body = JSON.stringify({ username, password })
 
-            const resp = await fetch('http://localhost:4000/login', options)
+            const resp = await fetch('http://localhost:4000/user', options)
 
             // Si el ok es false, significa que se produjo un error en la petición
             if (!resp.ok) alert('Revise las credenciales y vuelva a intentarlo');

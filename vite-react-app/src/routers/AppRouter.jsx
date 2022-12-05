@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { SocketProvider } from '../context/SocketContext';
+//import { SocketProvider } from '../context/SocketContext';
 import { LoginScreen } from '../pages';
 import { DashboardRouter } from './DashboardRouter';
 import { PrivateRoutes } from './PrivateRoutes';
@@ -17,9 +17,9 @@ export const AppRouter = () => {
 
         <Route index path='/*' element={
           <PrivateRoutes>
-            <SocketProvider>
+           
             <DashboardRouter />
-            </SocketProvider>
+           
           </PrivateRoutes>
         } />
       </Routes>
