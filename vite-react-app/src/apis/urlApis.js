@@ -1,2 +1,2 @@
 
-export const urlBreakingBadApi = 'https://www.breakingbadapi.com/api';
+//export const urlBreakingBadApi = 'https://www.breakingbadapi.com/api';

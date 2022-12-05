@@ -37,7 +37,10 @@ export const NavBar = () => {
                                 <NavLink className={(isActive) => `${isActive && 'active'} nav-link`} to='/chat'>Chat</NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink className={(isActive) => `${isActive && 'active'} nav-link`} to='/donation'>Donar</NavLink>
+                                <NavLink className={(isActive) => `${isActive && 'active'} nav-link`} to='/donation'>Donaciones</NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className={(isActive) => `${isActive && 'active'} nav-link`} to='/donar'>Donar</NavLink>
                             </li>
                         </ul>
                         <ul className='navbar-nav w-100'>

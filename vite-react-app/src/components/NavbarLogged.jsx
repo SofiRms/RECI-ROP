@@ -18,7 +18,12 @@ export const NavbarLogged = () =>{
                             <li className="nav-item">
                                 <NavLink className="nav-link active" aria-current="page" to="/Inicio"><strong>Inicio</strong> </NavLink>
                             </li>
-
+                            <li className="nav-item">
+                                <NavLink className="nav-link active" aria-current="page" to="/donation"><strong>Donaciones</strong> </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink className="nav-link active" aria-current="page" to="/donar"><strong>Donar</strong> </NavLink>
+                            </li>
                             <li className="nav-item dropdown">
                                 <NavLink className="nav-link dropdown-toggle" to="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Modo
